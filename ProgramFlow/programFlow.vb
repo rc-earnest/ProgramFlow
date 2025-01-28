@@ -43,35 +43,48 @@ Module programFlow
         '    Console.WriteLine($"Not sure what happened")
         'End If
 
+        'Do
+
+
+
+        '    Console.WriteLine("Please enter your age: ")
+        '    userInput = Console.ReadLine()
+        '    Try
+        '        var = CInt(userInput)
+        '        Select Case var
+        '            Case 0 To 3
+        '                Console.WriteLine("Where are your parents?")
+        '            Case 4 To 10
+        '                Console.WriteLine("Sorry kid why don't you try the tea cups...")
+        '            Case 11 To 64
+        '                Console.WriteLine("Enjoy the Ride!")
+        '            Case 65 To 100
+        '                Console.WriteLine("Please sign this liability release form.")
+        '            Case > 100
+        '                Console.WriteLine("Someone misplaced their mama?!")
+        '            Case Else
+        '                Console.WriteLine("Well this is weird...")
+        '        End Select
+
+        '    Catch ex As Exception
+        '        Console.WriteLine($"You entered {userInput}.")
+        '    End Try
+
+        'Loop Until userInput = "Q"
+        'Console.WriteLine($"Have a nice day!")
+
         Do
-
-
-
-            Console.WriteLine("Please enter your age: ")
+            Console.WriteLine("Type something and press enter: ")
             userInput = Console.ReadLine()
-            Try
-                var = CInt(userInput)
-                Select Case var
-                    Case 0 To 3
-                        Console.WriteLine("Where are your parents?")
-                    Case 4 To 10
-                        Console.WriteLine("Sorry kid why don't you try the tea cups...")
-                    Case 11 To 64
-                        Console.WriteLine("Enjoy the Ride!")
-                    Case 65 To 100
-                        Console.WriteLine("Please sign this liability release form.")
-                    Case > 100
-                        Console.WriteLine("Someone misplaced their mama?!")
-                    Case Else
-                        Console.WriteLine("Well this is weird...")
-                End Select
-
-            Catch ex As Exception
-                Console.WriteLine($"You entered {userInput}.")
-            End Try
-
+            Console.WriteLine($"In the Do, Loop Until: ")
         Loop Until userInput = "Q"
-        Console.WriteLine($"Have a nice day!")
+
+        Do While userInput = "Q"
+            Console.WriteLine("Type something and press enter: ")
+            userInput = Console.ReadLine()
+            Console.WriteLine($"In the Do While Loop: ")
+        Loop
+
     End Sub
 
 End Module
